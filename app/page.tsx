@@ -4,6 +4,7 @@ import Image from "next/image";
 export default function Home() {
 const setTheme = (color: string) => {
   document.querySelector("html")?.setAttribute("data-theme", color);
+  localStorage.setItem("theme", color)
 }
 
   return (

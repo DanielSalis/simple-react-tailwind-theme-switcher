@@ -22,6 +22,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const getTheme = () => {
+    const theme = localStorage.getItem("theme")
+    if(theme) {
+      document.querySelector("html")?.setAttribute("data-theme", theme);
+    }
+  }
+
   return (
     <html lang="en" className="w-[100%] h-[100%]">
       <body

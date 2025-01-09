@@ -2,20 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  :root{
+    --grape: 114, 34 ,204;
+    --background: 245, 245, 245;
+    --border: 212, 212, 212;
+    --card: 255, 255, 255;
+    --copy-primary: 23,23,23;
+    --copy-secondary: 115, 115, 115;
+    --cta: 139, 92, 115;
+    --cta-active: 124, 58, 237;
+    --cta-text: 255, 255, 255;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    background: rgba(var(--background));
+  }
+  @media (prefers-color-scheme: dark){
+    :root {
+      --grape: 114, 34, 204;
+      --background: 23, 23, 23;
+      --border: 64, 64, 64;
+      --card: 45, 45, 45;
+      --copy-primary: 245, 245, 245;
+      --copy-secondary: 179, 179, 179;
+      --cta: 139, 92, 115;
+      --cta-active: 124, 58, 237;
+      --cta-text: 255, 255, 255;
+
+      background: rgba(var(--background));
+    }
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+:root[data-theme="light"]{
+  --grape: 114, 34 ,204;
+  --background: 245, 245, 245;
+  --border: 212, 212, 212;
+  --card: 255, 255, 255;
+  --copy-primary: 23,23,23;
+  --copy-secondary: 115, 115, 115;
+  --cta: 139, 92, 115;
+  --cta-active: 124, 58, 237;
+  --cta-text: 255, 255, 255;
+
+  background: rgba(var(--background));
+}
+
+:root[data-theme="dark"]{
+  --grape: 114, 34, 204;
+  --background: 23, 23, 23;
+  --border: 64, 64, 64;
+  --card: 45, 45, 45;
+  --copy-primary: 245, 245, 245;
+  --copy-secondary: 179, 179, 179;
+  --cta: 139, 92, 115;
+  --cta-active: 124, 58, 237;
+  --cta-text: 255, 255, 255;
+
+  background: rgba(var(--background));
+}
+
+:root[data-theme="catpuccin"]{
+  --grape: 148, 92, 214;
+  --background: 30, 30, 46;
+  --border: 40, 40, 60;
+  --card: 48, 48, 72;
+  --copy-primary: 220, 224, 247;
+  --copy-secondary: 148, 162, 192;
+  --cta: 203, 102, 139;
+  --cta-active: 180, 118, 230;
+  --cta-text: 30, 30, 46;
+
+  background: rgba(var(--background));
+}
+
+:root[data-theme="nord"]{
+  --grape: 143, 188, 187; /* Nord Frost: Aqua */
+  --background: 46, 52, 64; /* Nord Polar Night */
+  --border: 59, 66, 82; /* Nord Polar Night: Lighter */
+  --card: 67, 76, 94; /* Nord Polar Night: Even Lighter */
+  --copy-primary: 216, 222, 233; /* Nord Snow Storm */
+  --copy-secondary: 143, 188, 187; /* Nord Frost: Aqua */
+  --cta: 94, 129, 172; /* Nord Frost: Frosted Blue */
+  --cta-active: 136, 192, 208; /* Nord Frost: Frosted Cyan */
+  --cta-text: 46, 52, 64; /* Nord Polar Night */
+
+  background: rgba(var(--background));
 }
